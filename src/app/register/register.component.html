@@ -1,8 +1,8 @@
-<div class="d-flex align-items-center light-blue-gradient" style="height: 100vh;">
+<div class="d-flex align-items-center light-blue-gradient" id="backg" style="height: 100vh;">
     <div class="container" >
         <div class="d-flex justify-content-center">
             <div class="col-md-6">
-                <div class="card rounded-0 shadow">
+                <div class="card rounded-4 shadow" style="background-color:blue ;">
                     <div class="card-body">
                         <h3 class="text-center">Sign Up</h3>
                         <form [formGroup]="registerForm" >
@@ -24,7 +24,7 @@
                             </div>
                             <br>
                             <div class="d-grid gap-2">
-                                <button class="btn btn-primary" type="Submit"(click)="register()">Register</button>
+                                <button class="btn btn-warning" type="Submit"(click)="register()">Register</button>
                               </div>
                         </form>
                     </div>
