@@ -1,24 +1,24 @@
 <div class="d-flex align-items-center light-blue-gradient" id="backg" style="height: 100vh;">
     <div class="container" >
         <div class="d-flex justify-content-center">
-            <div class="col-md-6">
-                <div class="card rounded-4 shadow"  style="background-color:blue ;">
+            <div class="col-md-4">
+                <div class="card rounded-4 shadow-3" id="boo" style="background: url();">
                     <div class="card-body">
                         <h3 class="text-center">Log In</h3>
                         <form [formGroup]="registerForm" >
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Username: </label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" formControlName="uname" placeholder="Enter username">
+                                <input type="text" class="form-control" id="exampleInputEmail1" formControlName="uname" (change)="unameChange($event)" placeholder="Enter username">
                                 <div *ngIf="this.registerForm.get('uname')?.errors && this.registerForm.get('uname')?.touched" style="color:red;">Invalid User Name</div>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Password: </label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" formControlName="pswd" placeholder="Password">
+                                <input type="password" class="form-control" id="exampleInputPassword1" formControlName="pswd" (change)="pswdChange($event)" placeholder="Password">
                                 <div *ngIf="this.registerForm.get('pswd')?.errors && this.registerForm.get('pswd')?.touched" style="color:red;">Invalid password</div>
                             </div>
                             <br>
                             <div class="d-grid gap-2">
-                                <button class="btn btn-warning" type="button" (click)="login()">LogIn</button>
+                                <button class="btn btn-primary " type="button"(click)="login()" (click)="bogin()">LogIn</button>
                               </div>
                         </form>
                     </div>

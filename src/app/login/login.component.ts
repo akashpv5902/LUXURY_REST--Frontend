@@ -25,11 +25,25 @@ export class LoginComponent {
   constructor(private rfm:ReactiveFormsModule ,private router:Router,private fb:FormBuilder,private ds:DataService) { }
 
 
-  login(){
+  userDetails:any={
+    amal:{username:"Amal",password:1000},
+    anu:{username:"Anu",password:1001},
+    arun:{username:"Arun",password:1002},
+    sarah:{username:"Sarah",password:1003}
+  }
+
+
+
+
+
+  bogin(){
     console.log(this);
 
     var uname=this.registerForm.value.uname;
     var pswd=this.registerForm.value.pswd;
+    // var userDetails=this.userDetails
+
+  
 
     if(this.registerForm.valid){
 
@@ -47,9 +61,43 @@ export class LoginComponent {
     }else{
       alert('invalid form')
     }
-  
-    
+
     
   }
+
+  unameChange(event:any){
+    this.uname=event.target.value
+    console.log(this.uname);
+    
+  }
+
+  pswdChange(event:any){
+    this.pswd=event.target.value
+    console.log(this.pswd);
+    
+  }
+
+  login(){
+    var uname=this.uname 
+    
+    var pwd=this.pswd
+    var userDetails=this.userDetails
+    
+   if(uname in userDetails){
+    if(pwd == userDetails[uname]["password"]){
+      alert('login successfull')
+
+      this.router.navigateByUrl('dashboard')
+
+    }else
+    {
+      alert('invalid password')
+    }
+
+   }else{
+    alert('invalid username')
+   }
+    
+  }
 
 }
