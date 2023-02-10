@@ -65,17 +65,17 @@ export class LoginComponent {
     
   }
 
-  unameChange(event:any){
-    this.uname=event.target.value
-    console.log(this.uname);
+  // unameChange(event:any){
+  //   this.uname=event.target.value
+  //   console.log(this.uname);
     
-  }
+  // }
 
-  pswdChange(event:any){
-    this.pswd=event.target.value
-    console.log(this.pswd);
+  // pswdChange(event:any){
+  //   this.pswd=event.target.value
+  //   console.log(this.pswd);
     
-  }
+  // }
 
   login(){
     var uname=this.uname 

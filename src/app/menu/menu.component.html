@@ -1,0 +1,77 @@
+<app-header></app-header>
+
+<div >
+    <div>
+      <div >
+        <img src="https://wallpapercave.com/wp/wp11872849.jpg" class="d-block w-100" alt="..." width="100%" height="90%">
+        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+            <div class="p-3" style="max-width: 900px;">
+                <h3 class="text-white text-uppercase mb-md-3 " id="title">Our Menu</h3>
+                <h1 class="display-3 text-white mb-md-4 " id="title1">Discover The Tastes We Offer</h1>
+                
+                <!-- <a href="tour-package" class="button">Book Now</a> -->
+            </div>
+          </div>
+      </div>
+      <div class="container">
+        <div class="container d-flex mb-4">
+          <div class="p-2 ms-3 me-3">
+            <a (click)="filter('')">
+              <small id="filt" class="m-0 "><h4>All Dishes</h4></small>
+          </a>
+          </div>
+          <div class="p-2 ms-3 me-3">
+            <a (click)="filter(1)">
+              <small id="filt" class="m-0 "><h4>Breakfast</h4></small>
+          </a>
+          </div>
+          <div class="p-2 ms-3 me-3">
+            <a (click)="filter(2)">
+              <small id="filt" class="m-0 "><h4>Lunch</h4></small>
+          </a>
+          </div>
+          <div class="p-2 ms-3 me-3">
+            <a (click)="filter(3)">
+              <small id="filt" class="m-0 "><h4>Dinner</h4></small> </a>
+          </div>
+        </div>
+         </div>
+     <!-- Section-->
+     <section class="py-5">
+      <div class="container px-4 px-lg-5 ">
+          <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+              <div *ngFor="let i of filtermenu" class="col mb-5">
+                  <div class="card h-100" id="cardid">
+                      <!-- Product image-->
+                      <img class="card-img-top" src="{{i.image}}" alt="..." />
+                      <!-- Product details-->
+                      <div class="card-body p-4">
+                          <div class="text-center">
+                              <!-- Product name-->
+                              <h5 class="fw-bolder" style="color: black;">{{i.carName}}</h5>
+                              <!-- Product price-->
+                             <h6 style="color: black;">${{i.price}}</h6>
+                          </div>
+                      </div>
+                      <!-- Product actions-->
+                      <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                          <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{i.recipie}}">View recipie</a></div>
+                      </div>
+                  </div>
+              </div>
+      
+
+    </div>
+
+  </div>
+  
+
+
+
+
+
+  <app-footer></app-footer>
+  
+
+
+

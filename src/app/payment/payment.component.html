@@ -1,0 +1,19 @@
+<app-header></app-header>
+
+<div class="checkout">
+    <br><br><br><br><br><br><br>
+    <h1>
+      Checkout
+    </h1>
+    <br>
+    <form>
+      <input placeholder="Card number" type="text" /><input placeholder="Name on card" type="text" />
+      <div class="half">
+        <input placeholder="MM/YY" type="date" /><input placeholder="CVV" maxlength="3" type="text" />
+      </div>
+      <br><br>
+      <button type="submit" (click)="pay()">Pay Now</button>
+    </form>
+  </div>
+
+ 

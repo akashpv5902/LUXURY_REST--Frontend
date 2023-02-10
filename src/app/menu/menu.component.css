@@ -1,0 +1,17 @@
+a{
+    cursor: pointer;
+}
+
+h4:hover{
+    color: #cda45e;
+}
+#cardid{
+    transform: scale( 1);
+    transition: all .3s linear;
+
+}
+#cardid:hover{
+    transform: scale( 1.08);
+    transition: all .3s linear;
+    cursor: pointer;
+}

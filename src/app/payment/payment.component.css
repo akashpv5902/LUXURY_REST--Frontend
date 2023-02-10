@@ -1,0 +1,52 @@
+body {
+    background: #1C1D21;
+  }
+  
+  h1 {
+    color: #cda45e;
+    text-align: center;
+  }
+  
+  form {
+    width: 350px;
+    margin: 0 auto;
+  }
+  form .half input {
+    width: 165px;
+    float: left;
+  }
+  form .half input:first-child {
+    margin-right: 20px;
+  }
+  form input, form button {
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 20px;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    outline: none;
+    border: none;
+  }
+  form input {
+    color: #1C1D21;
+  }
+  form button {
+    color: white;
+    background: #1C1D21;
+    font-weight: bold;
+    border-radius:  50px;
+    padding: 8px 25px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border: 2px solid #cda45e;
+  
+  }
+  form button:hover{
+    color: #1C1D21;
+    background-color: #cda45e;
+  }

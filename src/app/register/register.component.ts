@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
 
   // register model
   registerForm=this.fb.group({
-    email:['',[Validators.required]],
+    email:['', [Validators.required, Validators.pattern(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)]],
     uname:['',[Validators.required,Validators.pattern('[a-zA-z]*')]],
     pswd:['',[Validators.required,Validators.pattern('[0-9a-zA-z]*')]]
 
@@ -57,6 +57,31 @@ register(){
   }
 
   
+}
+
+regi(){
+
+  var email = this.email
+  var uname = this.uname
+  var pswd = this.pswd
+
+  this.ds.regi(email,uname,pswd).subscribe((result:any)=>{
+    alert(result.message)
+    this.router.navigateByUrl('')
+  },
+  result=>{
+    alert(result.error.message)
+  })
+
+  // if(result){
+  //   alert('Registration Successful')
+  //   this.router.navigateByUrl('')
+  // }
+  // else{
+  //   alert('Already Exists')
+  // }
+
+
 }
 
 }
